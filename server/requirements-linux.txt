@@ -1,0 +1,9 @@
+# Dependensi untuk cloud (Linux / Hugging Face Spaces).
+# Catatan: pywin32 TIDAK ada di sini — hanya untuk Windows
+# (lihat requirements.txt). Konversi Office di Linux memakai
+# LibreOffice headless yang diinstall lewat Dockerfile.
+fastapi
+uvicorn
+pymupdf
+python-multipart
+rapidocr-onnxruntime

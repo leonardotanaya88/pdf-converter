@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ── Tool Suite house style (light/blue) ── */
+    --background: 60 1% 98%;        /* #FAFAF8 */
+    --foreground: 40 6% 10%;        /* #1A1917 */
+    --card: 0 0% 100%;              /* #FFFFFF */
+    --card-foreground: 40 6% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 40 6% 10%;
+    --primary: 210 75% 37%;         /* #185FA5 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 53 3% 95%;
+    --secondary-foreground: 40 6% 10%;
+    --muted: 53 3% 94%;
+    --muted-foreground: 45 4% 40%;  /* #6B6963 */
+    --accent: 210 75% 95%;          /* #E6F1FB */
+    --accent-foreground: 210 75% 25%; /* #0C447C */
+    --destructive: 0 57% 41%;       /* #A32D2D */
+    --destructive-foreground: 0 0% 100%;
+    --success: 165 76% 25%;         /* #0F6E56 */
+    --success-foreground: 0 0% 100%;
+    --warning: 33 85% 28%;          /* #854F0B */
+    --warning-foreground: 0 0% 100%;
+    --border: 53 11% 86%;           /* #E0DED8 */
+    --input: 53 11% 86%;
+    --ring: 210 75% 37%;
+    --radius: 0.625rem;             /* 10px */
+  }
+
+  .dark {
+    /* ── Dark Futuristic Warm ── */
+    --background: 25 15% 6%;        /* #12100E - warm near-black */
+    --foreground: 45 15% 92%;       /* #EDE9E3 - warm off-white */
+    --card: 30 12% 9%;              /* #1A1815 - elevated surface */
+    --card-foreground: 45 15% 92%;
+    --popover: 30 12% 9%;
+    --popover-foreground: 45 15% 92%;
+    --primary: 35 90% 55%;          /* #E8A838 - warm gold */
+    --primary-foreground: 25 15% 4%;
+    --secondary: 30 8% 14%;         /* #2A2722 */
+    --secondary-foreground: 45 15% 85%;
+    --muted: 30 8% 12%;             /* #23211D */
+    --muted-foreground: 40 5% 55%;  /* #8A857A */
+    --accent: 35 60% 22%;           /* #4D3E1E - warm amber surface */
+    --accent-foreground: 35 90% 75%; /* #F5D87A */
+    --destructive: 15 75% 50%;      /* #E04D2A - warm red */
+    --destructive-foreground: 0 0% 100%;
+    --success: 155 55% 40%;         /* #3DA66D - warm green */
+    --success-foreground: 0 0% 100%;
+    --warning: 35 90% 55%;          /* #E8A838 - same as primary */
+    --warning-foreground: 25 15% 4%;
+    --border: 30 8% 18%;            /* #36322A */
+    --input: 30 8% 18%;
+    --ring: 35 90% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  /* Smooth theme transition */
+  *,
+  *::before,
+  *::after {
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+@layer utilities {
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Glow utilities for futuristic feel */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3), 0 0 40px hsl(var(--primary) / 0.15);
+  }
+  .glow-warm {
+    box-shadow: 0 0 20px hsl(var(--warning) / 0.3), 0 0 40px hsl(var(--warning) / 0.15);
+  }
+  .glow-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.25);
+  }
+
+  /* Subtle grid pattern for depth */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.1) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
