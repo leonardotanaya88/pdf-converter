@@ -1,6 +1,6 @@
 # PDF Converter
 
-Alat PDF ala iLovePDF — **100% di browser**. Semua pemrosesan berjalan
+Alat PDF Seperti iLovePDF — **100% di browser**. Semua pemrosesan berjalan
 client-side; file tidak pernah diupload ke server mana pun.
 
 Dibangun mengikuti `pdf-tools-project-scope.md` (Fase 1 lengkap, Next.js 14).
@@ -123,7 +123,8 @@ npm run dev                               # di terminal lain
 - **Compress** (`/tools/compress`) — rekompresi gambar + garbage collect
   (pengganti Ghostscript yang tidak perlu install; hasilnya cukup signifikan
   untuk PDF bergambar).
-- **OCR** (`/tools/ocr`) — dua mode: PDF searchable (halaman jadi gambar +
+- **OCR** (`/too
+- ls/ocr`) — dua mode: PDF searchable (halaman jadi gambar +
   teks tak terlihat) atau ekstrak teks per halaman (TXT).
   Mesin: **RapidOCR (PaddleOCR-v3 via ONNX)** — deviasi dari scope §2
   ("Tesseract") karena Tesseract tidak bisa diinstall tanpa admin di mesin
